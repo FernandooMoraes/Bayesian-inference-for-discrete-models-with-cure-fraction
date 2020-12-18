@@ -24,7 +24,7 @@ library(DiscreteWeibull)
 
 set.seed(2020)
 
-### descrição de algumas das variáveis utilizadas
+### description of some of the variables used
 # q model parameter
 # b model parameter
 # f parameter that models the fraction of cured
