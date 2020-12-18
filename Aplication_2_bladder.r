@@ -5,7 +5,7 @@ library(MCMCpack)
 require(coda)
 require(lattice)
 require(MASS)
-set.seed(131528)
+set.seed(2020)
 
 
 time=bladder[,5]
@@ -13,7 +13,7 @@ censure=bladder[,6]
 n=length(censure)
 
 
-######## FUNÇÃO DE SOBREVIVÊNCIA DA WEIBULL DISCRETA COM FRAÇÃO DE CURADOS
+######## WEIBULL DISCRETE SURVIVAL FUNCTION WITH CURED FRACTION
 surv.weidc.fc<-function(x,q,b,f){ f + (1-f)*( (q)^((x+1)^b) )}
 
 # EMPIRICAL K-M ESTIMATOR
