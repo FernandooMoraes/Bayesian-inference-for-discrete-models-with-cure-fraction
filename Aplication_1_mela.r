@@ -5,10 +5,13 @@ library(MCMCpack)
 require(coda)
 require(lattice)
 require(MASS)
-set.seed(131528)
+set.seed(2020)
 
+# Change of directory is necessary to run the codes below
+# Suggestion for change, you use the setwd () function
+# For example : setwd("C:/Users/...")  ...  to complete
 
-dado <- read.table("mela (1).txt",header = T)   
+dado <- read.table("mela.txt",header = T)   
 dado
 attach(dado)
 names(dado)
@@ -17,7 +20,7 @@ time<-dado$tempo
 censure<-dado$censura
 n<-length(dado$censura)
 
-######## FUNÇÃO DE SOBREVIVÊNCIA DA WEIBULL DISCRETA COM FRAÇÃO DE CURADOS
+######## WEIBULL DISCRETE SURVIVAL FUNCTION WITH CURED FRACTION
 surv.weidc.fc<-function(x,q,b,f){ f + (1-f)*( (q)^((x+1)^b) )}
 
 # EMPIRICAL K-M ESTIMATOR
